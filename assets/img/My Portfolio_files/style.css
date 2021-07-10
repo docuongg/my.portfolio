@@ -1,0 +1,279 @@
+:root {
+    --white-color: white;
+    --black-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    line-height : 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#main {
+    
+}
+
+#header {
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 5;
+}
+
+#header .nav {
+    background: rgba(0,0,0,0.1);
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .logo {
+    line-height: 54px;
+    color: #0FB4B2;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 0 28px;
+}
+
+#header .nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#header .nav a {
+    display: block;
+    color: var(--white-color);
+    padding: 0 24px;
+    font-size: 16px;
+    line-height: 54px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+#header .nav a:hover {
+    color: #0FB4B2;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#slider {  
+    background: black url('/assets/img/BG4.jfif') top center / cover no-repeat;
+    padding-bottom: 48px;
+}
+
+@keyframes slipDown {
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+      }
+
+    50% {
+        opacity: 0;
+    }
+      
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+}
+
+@keyframes slipIn {
+    from {
+        transform: translateX(-30%);
+        opacity: 0;
+      }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+}
+
+#slider .slider__content {
+    padding-top: 48px;
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    height: calc(100vh - 48px);
+}
+
+#slider .content__heading {
+    padding-top: 64px;
+    padding-bottom: 16px;
+    animation: slipIn 1s ease-in-out; 
+}
+
+.content__heading h2 {
+    font-size: 36px;
+    color: #eee;
+}
+
+.content__heading h1 {
+    font-size :54px;
+    padding: 16px 0;
+    color: #0FB4B2;
+    text-shadow: 0 0 2px #000;
+}
+
+#slider .content__sub p{
+    color: #eee;
+    font-size: 26px;
+    padding: 16px 0;
+    animation: slipDown 2s cubic-bezier(0.84 , 0.16 , 0.16 , 0.84) forwards;
+}
+
+.more-btn {
+    margin-top: 48px;
+    animation: slipDown 2s cubic-bezier(0.84 , 0.16 , 0.16 , 0.84) forwards;
+}
+
+#slider .more-btn a {
+    background-color: #0FB4B2;
+    padding: 16px 64px;
+    color: white;
+    font-weight: 600;
+}
+
+#slider .more-btn a:hover {
+    background-color: rgba(0,0,0,0.3);
+    color: #0FB4B2;
+}
+    /* Content: Start */
+
+#about .section {
+    padding: 48px 0;
+}
+
+.section__container {
+    background-image:linear-gradient(0,rgba(0,0,0,0.5),rgba(255,255,255,0.5)) url('/assets/img/BG7.jfif') ;
+}
+
+#about h1 {
+    color: #0FB4B2;
+}
+
+#about .section__title {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 24px;
+}
+
+#about .section__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 0;
+}
+
+.section__content h2 {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.content__element {
+    padding: 0 48px;
+    text-align: justify;
+}
+
+.section .portrait {
+    text-align: center;
+    flex: 1;
+}
+
+.section .portrait img{
+    margin-top: 8px;
+    width:60%;
+}
+
+.section .element--info {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.element--info p {
+    padding: 4px;
+}
+
+.content__skill {
+    padding: 48px 0;
+}
+
+.bar {
+    height: 3px;
+    width: 400px;
+    background: #ccc;
+    position: relative;
+    margin: 24px 0;
+    border-radius: 10%;
+    z-index:2;
+}
+
+.skill__info p {
+    width: 400px;
+}
+
+.skill__info--pts p:after {
+    content: "75%";
+    float: right;
+}
+
+.skill__info--html p:after {
+    content: "90%";
+    float: right;
+}
+
+.skill__info--wordpress p:after {
+    content: "70%";
+    float: right;
+}
+
+.progress_bar {
+    position: absolute;
+    border-radius: 10%;
+    height: 3px;
+    background: #0FB4B2;
+    z-index:3;
+}
+
+.bar--pts {
+    width: 75%;
+}
+
+.bar--html {
+    width: 90%;
+}
+
+.bar--wordpress {
+    width: 70%;
+}
+
+.section .section__box {
+    display: flex;
+    justify-content: center;
+    flex-wrap : wrap;
+}
+
+.section .section__box img {
+    width: 300px;
+    height: 170px;
+    margin: 16px;
+}
+
+#footer {
+
+}
